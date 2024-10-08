@@ -1,0 +1,60 @@
+# Ignore Rust target directory
+/target/
+/aws
+
+# Ignore Rust Cargo lock file (if you don't want to track it)
+/Cargo.lock
+
+# Ignore Rust build artifacts and backups
+**/*.rs.bk
+**/*.rs~
+
+# Ignore binary files
+/bootstrap
+
+# Ignore node_modules (for CDK TypeScript project dependencies)
+/node_modules/
+
+# Ignore CDK-specific files
+/cdk.out/                             # CDK output directory for synthesized CloudFormation templates
+cdk.context.json                      # CDK context file that can contain sensitive information
+*.cdk.staging                         # CDK staging files
+cdk.staging/                          # CDK temporary staging folder
+
+# Ignore Lambda function deployment package
+/infra/dist/                          # Directory for Lambda deployment packages
+**/bootstrap                          # Generated bootstrap binary file for Lambda
+
+# Ignore build and deployment scripts
+/build.sh
+/cdk-deploy.sh
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store                             # macOS specific file
+Thumbs.db                             # Windows specific file
+
+# Ignore IDE or editor specific directories and files
+/.idea/                                # IntelliJ IDEA project settings
+.vscode/                               # Visual Studio Code settings
+*.suo                                  # Visual Studio solution user options file
+*.bak                                  # Backup files
+*.tmp                                  # Temporary files
+*.swp                                  # Vim swap files
+
+# Ignore Python virtual environments and compiled files (if using Python)
+/.venv/
+__pycache__/
+*.pyc
+
+# Ignore environment files (if using them for configuration)
+.env
+
+# AWS SAM and Terraform build artifacts (if applicable)
+/.aws-sam/
+.terraform/
+
+# Ignore AWS-related CLI and SDK files
+.aws/                                  # AWS CLI configuration directory
